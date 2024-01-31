@@ -14,12 +14,16 @@
   /* navbar------css */
 
   .navbar{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     gap: 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.429);
+    z-index: 1;
   }
 
   .navbar .navbar__title{
@@ -40,6 +44,7 @@
     border: none;
     font-size: 14px;
     width: 100%;
+    background-color: transparent;
 
   }
   .navbar__center input:focus{
@@ -51,7 +56,24 @@
     align-items: center;
     gap: 20px;
   }
-
+/* my learning popup */
+.mylearning{
+  position: relative;
+  cursor: pointer;
+}
+  .learning__popup{
+   background-color: #fff;
+   border: 1px solid black;
+   width: 150px;
+   padding: 5px 10px;
+  position: absolute;
+  top: 150%;
+  z-index: 2;
+  display: none;
+  }
+  .mylearning:hover .learning__popup{
+    display: block;
+  }
   /* category */
 
   .categories{
@@ -68,10 +90,23 @@
 }
 
 /* banner section */
-
+.banner__section{
+  position: relative;
+}
 .banner__section img{
     width: 100%;
+  
 
+}
+.sale__image{
+  position: absolute;
+  background-color: #838383;
+  border: 1 px solid black;
+  width: 35%;
+  padding: 15px;
+  border-radius: 10px;
+  top: 10%;
+  left: 10%;
 }
 
 
