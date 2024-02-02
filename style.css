@@ -56,6 +56,9 @@
     align-items: center;
     gap: 20px;
   }
+  .navbar__toggle{
+    display: none;
+  }
 /* my learning popup */
 .mylearning{
   position: relative;
@@ -148,7 +151,9 @@
 
 
 .course__card--item{
-    width: 200px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin-right: 10px;
 }
 .course__card--item img{
     width: 100%;
@@ -204,3 +209,28 @@
   background-color: purple;
 }
 
+@media screen and (max-width:800px) {
+  body{
+    font-size: 10px;
+  }
+  .category__section{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:600px) {
+  .course__card--item{
+   
+    flex-basis: 40%;
+  }
+  .navbar__center{
+    display: none;
+  }
+  .navbar__right{
+    display: none;
+  }
+  .navbar__toggle{
+    display: block !important;
+  }
+}
